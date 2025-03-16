@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- Объявление типа документа. Это говорит браузеру, что документ написан на HTML5. -->
+<html lang="ru">
+<!-- Начало HTML-документа. Атрибут lang="ru" указывает, что язык содержимого — русский. -->
+<head>
+    <!-- Начало секции <head>, которая содержит метаданные и ссылки на внешние ресурсы. -->
+    <meta charset="UTF-8">
+    <!-- Указывает кодировку документа (UTF-8 поддерживает большинство символов). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Настройка адаптивного дизайна. Указывает браузеру, как масштабировать страницу на мобильных устройствах. -->
+    <title>Главная страница</title>
+    <!-- Заголовок страницы, который отображается во вкладке браузера. -->
+    <!-- Внешняя таблица стилей -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение внешнего CSS-файла для стилизации страницы. -->
+    <!-- Внешний JavaScript-файл -->
+    <script src="scripts.js" defer></script>
+    <!-- Подключение внешнего JavaScript-файла. Атрибут defer указывает, что скрипт должен загружаться после загрузки HTML. -->
+    <!-- Внутренняя таблица стилей -->
+    <style>
+        /* Внутренний CSS для стилизации элементов на странице. */
+        h1 {
+            color: #2E86C1; /* Цвет текста для всех заголовков <h1>. */
+        }
+        .highlight {
+            background-color: #F9E79F; /* Фоновый цвет для элементов с классом highlight. */
+            padding: 5px; /* Внутренний отступ для элементов с классом highlight. */
+        }
+        #main-header {
+            text-align: center; /* Выравнивание текста по центру для элемента с id main-header. */
+            font-size: 2.5em; /* Размер шрифта для элемента с id main-header. */
+        }
+        /* Плавная прокрутка для якорных ссылок */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Стили для навигации */
+        nav {
+            margin-bottom: 20px; /* Отступ снизу для навигационного меню. */
+        }
+        nav a {
+            margin-right: 10px; /* Отступ справа для ссылок в навигации. */
+            text-decoration: none; /* Убирает подчеркивание у ссылок. */
+            color: #2E86C1; /* Цвет для внутренних ссылок. */
+        }
+        nav a.anchor-link {
+            color: #E74C3C; /* Красный цвет для якорных ссылок. */
+        }
+        nav a:hover {
+            text-decoration: underline; /* Подчеркивание ссылок при наведении. */
+        }
+        /* Жирный текст для HTML, CSS и JavaScript */
+        dt strong {
+            font-weight: bold; /* Жирный шрифт для элементов <strong> внутри <dt>. */
+        }
+    </style>
+</head>
+<!-- Конец секции <head>. -->
+<body>
+    <!-- Начало секции <body>, которая содержит видимое содержимое страницы. -->
+
+    <header>
+        <!-- Секция <header> для верхней части страницы (шапка). -->
+        <h1 id="main-header" style="border-bottom: 2px solid #2E86C1;">Добро пожаловать на сайт-визитку!</h1>
+        <!-- Заголовок <h1> с id main-header. Встроенный стиль добавляет нижнюю границу. -->
+        <nav>
+            <!-- Секция <nav> для навигационного меню. -->
+            <!-- Внутренние ссылки -->
+            <a href="index.html">Главная</a> <!-- Ссылка на главную страницу. -->
+            <a href="about.html">О нас</a> <!-- Ссылка на страницу "О нас". -->
+            <a href="contact.html">Контакты</a> <!-- Ссылка на страницу "Контакты". -->
+            <br> <!-- Переход на новую строку -->
+            <!-- Якорные ссылки -->
+            <a class="anchor-link" href="#services">Услуги</a> <!-- Ссылка к разделу "Наши услуги". -->
+            <a class="anchor-link" href="#why-us">Почему мы?</a> <!-- Ссылка к разделу "Почему мы?". -->
+            <a class="anchor-link" href="#technologies">Технологии</a> <!-- Ссылка к разделу "Технологии". -->
+            <a class="anchor-link" href="#projects">Проекты</a> <!-- Ссылка к разделу "Наши проекты". -->
+        </nav>
+    </header>
+
+    <section>
+        <!-- Секция <section> для группировки связанного контента. -->
+        <h2 class="highlight">О компании</h2>
+        <!-- Заголовок <h2> с классом highlight. Применяются стили из CSS. -->
+        <p>Мы занимаемся созданием качественных и современных сайтов для вашего бизнеса.</p>
+        <!-- Параграф <p> с текстом о компании. -->
+
+        <h2 id="services">Наши услуги</h2>
+        <!-- Заголовок <h2> для раздела "Наши услуги". -->
+        <ul>
+            <!-- Неупорядоченный список <ul> для перечисления услуг. -->
+            <li>Разработка сайтов</li> <!-- Элемент списка <li>. -->
+            <li>SEO-оптимизация</li> <!-- Элемент списка <li>. -->
+            <li>Поддержка и обслуживание</li> <!-- Элемент списка <li>. -->
+        </ul>
+
+        <h2 id="why-us">Почему мы?</h2>
+        <!-- Заголовок <h2> для раздела "Почему мы?". -->
+        <ol>
+            <!-- Упорядоченный список <ol> для перечисления причин. -->
+            <li>Высокое качество работы</li> <!-- Элемент списка <li>. -->
+            <li>Индивидуальный подход</li> <!-- Элемент списка <li>. -->
+            <li>Доступные цены</li> <!-- Элемент списка <li>. -->
+        </ol>
+
+        <h2 id="technologies">Технологии</h2>
+        <!-- Заголовок <h2> для раздела "Технологии". -->
+        <dl>
+            <!-- Список определений <dl> для перечисления технологий. -->
+            <dt><strong>HTML</strong></dt> <!-- Термин <dt> с жирным текстом для HTML. -->
+            <dd>Язык разметки для создания веб-страниц.</dd> <!-- Определение <dd> для HTML. -->
+            <dt><strong>CSS</strong></dt> <!-- Термин <dt> с жирным текстом для CSS. -->
+            <dd>Язык стилей для оформления веб-страниц.</dd> <!-- Определение <dd> для CSS. -->
+            <dt><strong>JavaScript</strong></dt> <!-- Термин <dt> с жирным текстом для JavaScript. -->
+            <dd>Язык программирования для создания интерактивных элементов.</dd> <!-- Определение <dd> для JavaScript. -->
+        </dl>
+
+        <h2 id="projects">Наши проекты</h2>
+        <!-- Заголовок <h2> для раздела "Наши проекты". -->
+        <table style="width: 100%; border-collapse: collapse; border: 2px solid #2E86C1;">
+            <!-- Таблица <table> для отображения данных о проектах. -->
+            <tr>
+                <!-- Строка таблицы <tr>. -->
+                <th style="border: 1px solid #2E86C1; padding: 10px; background-color: #2E86C1; color: white;">Проект</th> <!-- Заголовок столбца <th>. -->
+                <th style="border: 1px solid #2E86C1; padding: 10px; background-color: #2E86C1; color: white;">Описание</th> <!-- Заголовок столбца <th>. -->
+                <th style="border: 1px solid #2E86C1; padding: 10px; background-color: #2E86C1; color: white;">Код</th> <!-- Заголовок столбца <th>. -->
+                <th style="border: 1px solid #2E86C1; padding: 10px; background-color: #2E86C1; color: white;">Детали</th> <!-- Заголовок столбца <th>. -->
+            </tr>
+            <tr>
+                <!-- Строка таблицы <tr>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">Сайт для кафе</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">Красивый и функциональный сайт для кафе.</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">F4259</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">
+                    <!-- Вложенная таблица с деталями проекта. -->
+                    <table style="width: 100%; border-collapse: collapse; border: 1px solid #1C5D99;">
+                        <tr>
+                            <!-- Строка таблицы <tr>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Технологии</th> <!-- Заголовок столбца <th>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Сроки</th> <!-- Заголовок столбца <th>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Логотип</th> <!-- Заголовок столбца <th>. -->
+                        </tr>
+                        <tr>
+                            <!-- Строка таблицы <tr>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px;">HTML, CSS, JavaScript</td> <!-- Ячейка таблицы <td>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px;">2 месяца</td> <!-- Ячейка таблицы <td>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px; text-align: center;">
+                                <img src="1.jpeg" alt="Логотип кафе" width="50" style="border-radius: 5px;"> <!-- Изображение. -->
+                            </td> <!-- Ячейка таблицы <td>. -->
+                        </tr>
+                    </table>
+                </td> <!-- Ячейка таблицы <td>. -->
+            </tr>
+            <tr>
+                <!-- Строка таблицы <tr>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">Интернет-магазин</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">Удобный интернет-магазин для продажи товаров.</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">F4260</td> <!-- Ячейка таблицы <td>. -->
+                <td style="border: 1px solid #2E86C1; padding: 10px;">
+                    <!-- Вложенная таблица с деталями проекта. -->
+                    <table style="width: 100%; border-collapse: collapse; border: 1px solid #1C5D99;">
+                        <tr>
+                            <!-- Строка таблицы <tr>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Технологии</th> <!-- Заголовок столбца <th>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Сроки</th> <!-- Заголовок столбца <th>. -->
+                            <th style="border: 1px solid #1C5D99; padding: 8px; background-color: #1C5D99; color: white;">Логотип</th> <!-- Заголовок столбца <th>. -->
+                        </tr>
+                        <tr>
+                            <!-- Строка таблицы <tr>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px;">React, Node.js</td> <!-- Ячейка таблицы <td>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px;">3 месяца</td> <!-- Ячейка таблицы <td>. -->
+                            <td style="border: 1px solid #1C5D99; padding: 8px; text-align: center;">
+                                <img src="2.png" alt="Логотип магазина" width="50" style="border-radius: 5px;"> <!-- Изображение. -->
+                            </td> <!-- Ячейка таблицы <td>. -->
+                        </tr>
+                    </table>
+                </td> <!-- Ячейка таблицы <td>. -->
+            </tr>
+        </table>
+
+        <!-- Кнопка с обработчиком события -->
+        <button onclick="showGreeting()">Запись</button>
+        <!-- Кнопка <button>, которая вызывает функцию showGreeting() при нажатии. -->
+    </section>
+
+    <!-- Встроенный JavaScript -->
+    <script>
+        // Встроенный сценарий на JavaScript.
+        function showGreeting() {
+            // Функция showGreeting, которая вызывается при нажатии на кнопку.
+            const name = prompt("Как вас зовут?", "Гость"); // Отображает диалоговое окно с запросом имени.
+            if (name) {
+                // Если пользователь ввел имя, выводим приветствие.
+                alert(`Привет, ${name}! Добро пожаловать на наш сайт! Вы записаны!`);
+            }
+        }
+    </script>
+</body>
+<!-- Конец секции <body>. -->
+</html>
+<!-- Конец HTML-документа. -->
